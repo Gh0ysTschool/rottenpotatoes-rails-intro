@@ -25,6 +25,7 @@ class MoviesController < ApplicationController
 			flash.keep
 			redirect_to movies_path(params) and return
 		end
+		
     @all_ratings = Movie.all_ratings
     @selected_ratings = (session[:ratings].keys if session.key?(:ratings))
     @selected_ratings ||=@all_ratings
